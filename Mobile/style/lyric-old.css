@@ -1,0 +1,165 @@
+﻿@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2018-01-17 16:22:07
+ * @version $Id$
+ */
+
+.lyricLayer{
+	position: absolute;
+	top: 0;left: 0;
+	width: 100%;
+	z-index: 999;
+	background-color: #5d5d5d;
+}
+
+.lyricLayer .layer-top{
+	border-bottom: 1px solid #ccc;
+	color: #fff;
+}
+
+.lyricLayer .layer-top .back{
+	width: 0.6rem;
+	height: 0.6rem;
+	margin-top: 0.08rem;
+	padding: 0.08rem 0.16rem;
+	border-right: 1px solid #ddd;
+	line-height: 0.6rem;
+	text-align: center;
+	
+}
+
+.lyricLayer .layer-top .song-info{
+	margin-left: 0.16rem;
+}
+
+.lyricLayer .layer-body{
+	position: relative;
+	height: 70%;
+}
+
+.lyricLayer .layer-body .lyric-list,.cdrom{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;left: 0;
+	z-index: -1;
+	background-color: #5d5d5d;
+}
+
+.cdrom{
+	z-index: 1;
+}
+
+.lyricLayer .layer-body .cd{
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	left: 50%;top: 50%;
+	margin: -100px 0 0 -100px;
+	z-index: 1;
+	background: #333 url(../images/singlecover.png) center/cover;
+	animation: rotation 15s linear infinite;
+}
+
+.lyricLayer .layer-body .cd .cdbg{
+	position: absolute;
+	top: 0;left: 0;bottom: 0;right: 0;
+	width: 70%;
+	height: 70%;
+	margin: auto;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.lyricLayer .layer-body .cd .cdbg img{
+	width: 100%;
+	height: 100%;
+}
+
+.lyricLayer section.fn ul{
+	padding-top: 4px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+}
+
+.lyricLayer section.fn ul li{
+	width: 20%;
+	text-align: center;
+
+}
+
+.lyricLayer section.fn ul li .iconfont{color: #fff;}
+
+.lyricLayer section.progress{
+	margin: 8px 8px;
+	color: #fff;
+	font-size: 12px;
+}
+
+.lyricLayer section.progress .progressbar{
+	position: relative;
+	margin: 4px;
+	width: 230px;
+	height: 4px;
+	background-color: #ddd;
+}
+
+.lyricLayer section.progress .progressbar .circle{
+	position: absolute;
+	top: -4px;
+	left: -4px;
+	padding: 8px;
+	background-color: #fff;
+}
+
+.progressbar .red{
+	width: 50%;
+	height: 100%;
+	border-radius: 2px;
+	background-color: red;
+}
+
+.circle .red{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 8px;
+	height: 8px;
+	margin: -4px;
+	border-radius: 50%;
+	background-color: red;
+}
+
+.lyricLayer .controler{
+	width: 200px;
+	margin: 10px auto 0;
+}
+
+.lyricLayer .controler .circle{
+	width: 32px;
+	height: 32px;
+	margin-left: 20px;
+}
+
+.lyricLayer .controler .circle .iconfont{
+	font-size: 32px;
+	color: #fff;
+}
+
+.lyricLayer .controler .play{
+	width: 48px;
+	height: 48px;
+}
+
+.lyricLayer .controler .play .icon-play{
+	font-size: 48px;
+}
+
+@keyframes rotation{
+	100%{transform: rotate(360deg);}
+}

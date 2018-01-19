@@ -1,0 +1,178 @@
+#play{
+    width: 1020px;
+    height: 50px;
+    background: #222225;
+}
+#play>div{
+    float: left;
+}
+.keys{
+    position: relative;
+    height: 50px;
+    width: 200px;
+    background: #222225;
+}
+.keys span{
+    position: absolute;
+    float: left;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.keys span.prev{
+    top: 12px;
+    left: 34px;
+    background: url("../images/playbar_8.png") -1px -131px;
+}
+
+.keys .trigger{
+    width: 32px;
+    height: 32px;
+    
+}
+
+.keys span.prev:hover{
+    background: url("../images/playbar_8.png") -31px -131px;
+}
+.keys span.bofang{
+    background: url("../images/playbar_8.png") -2px -206px;
+}
+.keys span.bofang:hover{
+    background: url("../images/playbar_8.png") -42px -206px;
+}
+
+.keys span.zanting{;
+    background: url("../images/playbar_8.png") -2px -167px;
+}
+.keys span.zanting:hover{
+    background: url("../images/playbar_8.png") -42px -167px;
+}
+.keys span.next{
+    top: 12px;
+    left: 118px;
+    background: url("../images/playbar_8.png") -81px -131px;
+}
+.keys span.next:hover{
+    background: url("../images/playbar_8.png") -111px -131px;
+}
+.keys span{
+    top: 9px;
+    left: 73px;
+}
+
+/*歌曲时间进度条*/
+.control{
+    width: 600px;
+}
+.control .progress{
+    float: left;
+    width: 400px;
+    height: 4px;
+    padding:18px 5px;
+}
+.control .progress .time{
+    float: left;
+    width: 50px;
+    font-size:12px;
+    color:#ddd;
+    text-align: center;
+}
+.control .progressBar{
+    position: relative;
+    float: right;
+    width: 350px;
+    height: 4px;
+    background: #464647;
+    margin-top:6px;
+    border-radius: 2px;
+}
+.progressBar .red{
+    width: 0;
+    height: 4px;
+    background: red;
+    border-radius: 2px;
+    
+}
+.progressBar .bar{
+    position: absolute;
+    top: -5px;
+    left: -7px;
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.progressBar .bar div,.volumeBar .bar div{
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    margin:auto;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: red;
+}
+
+
+.volume{
+    position: relative;
+    width: 150px;
+    height: 12px;
+    float: left;
+    padding:17px 0 0 10px;
+}
+.volume i{
+    float: left;
+    color:#7a7a7a;
+    cursor: pointer;
+}
+.volume i:hover{
+    color:#eee;
+}
+.volumeBar{
+    position: relative;
+    float: left;
+    width: 100px;
+    margin-left:15px;
+    height: 4px;
+    margin-top:6px;
+    border-radius: 2px;
+    background: #464647;
+    cursor: pointer;
+}
+.volumeBar .bar{
+    position: absolute;
+    top: -4px;
+    left: 94px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.volumeBar .red{
+    width: 100%;
+    height: 4px;
+    background: red;
+    border-radius: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

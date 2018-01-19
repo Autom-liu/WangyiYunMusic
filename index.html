@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" ondragstart="return false">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="FengYu">
+    <title>网易云音乐</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_503389_x73v26hbpuwn4s4i.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/container.css">
+    <link rel="stylesheet" href="css/play.css">
+</head>
+<body>
+    <div id="wrap">
+        <!--header-->
+        <div id="header">
+            <h1 class="logo"></h1>
+            <div class="searchBox">
+                <input class="search" type="text" placeholder="搜索音乐，歌手，歌词">
+                <i class="iconfont icon-search"></i>
+            </div>
+            <div class="option">
+                <div class="optionLeft">
+                    <i class="iconfont icon-pifu"></i>
+                    <i class="iconfont icon-youjian"></i>
+                    <i class="iconfont icon-shezhi"></i>
+                </div>
+                <div class="optionRight">
+                    <i class="iconfont icon-suoxiaochuangkou"></i>
+                    <i class="iconfont icon-dingwei_zuixiaohua"></i>
+                    <i class="iconfont icon-zuidahua"></i>
+                    <i class="iconfont icon-close"></i>
+                </div>
+            </div>
+        </div>
+        <!--body-->
+        <div id="container">
+            <div class="containerList">
+                <!--首页左边小导航  左边-->
+                <div id="sidebar">
+                    <!--左边导航列表-->
+                    <div class="sidebarTitle">
+                        <div class="sidebarList1">
+                            <p>推荐</p>
+                            <ul>
+                                <li><i class="iconfont icon-xin"></i>发现音乐</li>
+                                <li><i class="iconfont icon-xin"></i>私人音乐</li>
+                                <li><i class="iconfont icon-xin"></i>MV</li>
+                                <li><i class="iconfont icon-xin"></i>朋友</li>
+                            </ul>
+                        </div>
+                        <div class="sidebarList2">
+                            <p>我的音乐</p>
+                            <ul>
+                                <li><i class="iconfont icon-xin"></i>本地音乐</li>
+                                <li><i class="iconfont icon-xin"></i>本地音乐</li>
+                                <li><i class="iconfont icon-xin"></i>本地音乐</li>
+                                <li><i class="iconfont icon-xin"></i>本地音乐</li>
+                            </ul>
+                        </div>
+                        <div class="sidebarList3">
+                            <p>推荐</p>
+                            <ul>
+                                <li><i class="iconfont icon-xin"></i>本地音乐</li>
+                                <li><i class="iconfont icon-xin"></i>私人音乐</li>
+                                <li><i class="iconfont icon-xin"></i>本地音乐</li>
+                                <li><i class="iconfont icon-xin"></i>本地音乐</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--显示当前播放的歌曲名-->
+                    <div class="sidebarFooter">
+                        <img src="http://i.gtimg.cn/music/photo/mid_album_90/a/F/000QgFcm0v8WaF.jpg" alt="">
+                        <div>
+                            <p class="singname">意外</p>
+                            <p class="singername">薛之谦</p>
+                        </div>
+                    </div>
+                </div>
+                <!--container的body部分   右边-->
+                <div id="main">
+                    <div class="content">
+                        <div class="mainContentTop">
+                            <!--首页大头像-->
+                            <div class="headImg">
+                                <img src="images/bigface.png" alt="">
+                            </div>
+                            <!--首页个人信息-->
+                            <div class="infoBox">
+                                <div class="infoTittle clearfix">
+                                    <span>歌单</span>
+                                    <h1>我喜欢的音乐</h1>
+                                </div>
+                                <div class="infoMiddle">
+                                    <img src="images/idimg.png" alt="">
+                                    <span>心安处丶即吾乡</span>
+                                    <span>2014-10-15创建</span>
+                                </div>
+                                <div class="infoFooter">
+                                    <a href="#">播放全部</a>
+                                    <a href="#">收藏</a>
+                                    <a href="#">分享</a>
+                                    <a href="#">下载当前</a>
+                                </div>
+                            </div>
+                            <!--歌曲列表 -->
+                            <div class="infoBox2">
+                                <button>歌曲列表</button>
+                                <button>评论</button>
+                                <button>收藏者</button>
+                            </div>
+                        </div>
+                        <div class="contentBody">
+                            <table border="0">
+                                <thead>
+                                    <tr>
+                                        <td></td>
+                                        <td>音乐标题</td>
+                                        <td>歌手</td>
+                                        <td>专辑</td>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbody">
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--翻页按钮-->
+                        <div class="page">
+                            <div class="pageBody">
+                                <button id="firstPage">首页</button>
+                                <button id="prevPage">上一页</button>
+                                <button id="nextPage">下一页</button>
+                                <button id="lastPage">尾页</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--滚动条-->
+                    <div class="scrollbar">
+                        <div class="block"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!--歌词详情-->
+            <div class="contentDetails">
+                <div class="cd">
+                    <div class="cdbg">
+                        <img src="http://i.gtimg.cn/music/photo/mid_album_300/R/U/00116f791scVRU.jpg" alt="">
+                    </div>
+                </div>
+                <!--geci-->
+                <div class="lyric">
+                    <div class="top">
+                        <h1>Hotel California</h1>
+                        <p class="album">专辑：<span>none</span></p>
+                        <p class="singer">歌手：<span>Autom</span></p>
+                        <i class="iconfont icon-zuixiaohua"></i>
+                    </div>
+                    <div class="bottom">
+                        <div class="lyricBody">
+                            <ul id="lyricList">
+                                <li class="lyric-item">1</li>
+                                <li class="lyric-item">2</li>
+                                <li class="lyric-item">3</li>
+                                <li class="lyric-item">4</li>
+                                <li class="lyric-item">5</li>
+                                <li class="lyric-item">6</li>
+                                <li class="lyric-item">7</li>
+                                <li class="lyric-item">8</li>
+                                <li class="lyric-item">9</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--play-->
+        <div id="play">
+            <!--播放暂停上下一首-->
+            <div class="keys">
+                <span class="prev"></span>
+                <span class="bofang trigger"></span>
+                <span class="next"></span>
+            </div>
+            <!--进度条 音量进度条-->
+            <div class="control">
+                <div class="progress">
+                    <div class="time">00:00</div>
+                    <div class="progressBar">
+                        <div class="red"></div>
+                        <div class="bar"><div></div></div>
+                    </div>
+
+                </div>
+                <!--音量-->
+                <div class="volume">
+                    <i class="iconfont icon-yinliang"></i>
+                    <div class="volumeBar">
+                        <div class="red"></div>
+                        <div class="bar"><div></div></div>
+                    </div>
+                </div>
+            </div>
+            <!--lyric-->
+            <div class="lyric"></div>
+        </div>
+        <audio type="audio/mp4"  src=""></audio>
+    </div>
+
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script src="js/jquery.mousewheel.js"></script>
+    <script src="js/Component.js"></script>
+    <!-- <script src="js/test.js"></script> -->
+    <script src="js/song.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

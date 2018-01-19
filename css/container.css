@@ -1,0 +1,342 @@
+#container{
+    position: relative;
+    background-color: #16181c;
+}
+#container,.containerList{
+    height: 540px;
+    width: 100%;
+}
+.containerList{
+    position: absolute;
+    z-index: 3;
+}
+/*首页左边导航*/
+#sidebar{
+    float: left;
+    width: 200px;
+    height: 100%;
+    background: #191B1F;
+    color:#999;
+    border-right: 1px solid #23262C;
+}
+#sidebar .sidebarTitle{
+    height: 450px;
+    padding:10px;
+}
+.sidebarTitle ul li{
+    margin:10px;
+    cursor: pointer;
+}
+.sidebarTitle ul li:hover{
+    color:#ddd;
+}
+/*sideFooter*/
+.sidebarFooter{
+    height: 42px;
+    padding:8px;
+    border-top: 1px solid #23262C;
+}
+.sidebarFooter img{
+    float: left;
+    width: 40px;
+    height: 40px;
+}
+.sidebarFooter div{
+    float: left;
+    height: 40px;
+    width: 133px;
+    padding:5px;
+    font-size:14px;
+}
+.sidebarFooter div p{
+    line-height:16px;
+    cursor: pointer;
+}
+.sidebarFooter div p:hover{
+    color:#ddd;
+}
+
+/*main*/
+#main{
+    overflow: hidden;
+    position: relative;
+    width: 819px;
+    height: 540px;
+    float: right;
+    background: #16181C;
+}
+.content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 810px;
+    
+}
+.mainContentTop{
+    position: relative;
+    width: 789px;
+    height:290px;
+    padding:20px 0 0 20px;
+    border-bottom: 1px solid #B82525;
+}
+.mainContentTop>div{
+    float: left;
+    padding-left: 30px;
+}
+
+.mainContentTop .headImg img{
+    width: 200px;
+    height: 200px;
+}
+.mainContentTop .infoBox{
+    width: 500px;
+}
+.infoBox  .infoTittle span{
+    float: left;
+    padding:3px 8px;
+    color:#ddd;
+    border-radius: 5px;
+    background: #B82525;
+}
+.infoBox  .infoTittle h1{
+    float: left;
+    width: 150px;
+    height: 22px;
+    line-height: 22px;
+    font-size:22px;
+    color:#ccc;
+    padding:1px 0 0 10px;
+}
+/*个人信息*/
+.infoMiddle{
+    height: 30px;
+    padding:15px 0;
+    
+}
+.infoMiddle img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+.infoBox .infoMiddle span{
+    padding:0 5px;
+    vertical-align: middle;
+    color:#666;
+}
+.infoFooter{
+    height: 22px;
+}
+.infoFooter a{
+    padding:4px 15px;
+    background: #25272B;
+    color:#999;
+    border-radius: 5px;
+}
+.infoBox2{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.infoBox2 button{
+    font-size:14px;
+    padding:5px 15px;
+    background: #B82525;
+    color:#fff;
+    border:none;
+    outline: none;
+}
+/*contentBody*/
+table{
+    width: 100%;
+    text-align: center;
+    
+}
+thead td{
+    border:1px solid #23262C;
+    
+}
+
+td{
+    color:#828385;
+    height: 30px;
+    cursor: pointer;
+}
+td:nth-child(1){
+    width: 50px;
+}
+td:nth-child(2){
+    width: 292px;
+}
+td:nth-child(3){
+    width: 150px;
+}
+td:nth-child(4){
+    width: 190px;
+}
+tbody tr:nth-child(even){
+    background: #1A1C20;
+}
+tbody tr:hover{
+    background: #232529;
+}
+tbody tr td.singname{
+    color:#fff;
+}
+tbody tr:hover .singername,tbody tr:hover .albumname{
+    color:#fff;
+}
+
+/*首页歌曲列表滚动条*/
+#main .scrollbar{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 540px;
+}
+#main .scrollbar .block{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 100px;
+    background: #2C2E32;
+    border-radius: 5px;
+}
+
+/*翻页*/
+.page{
+    width: 100%;
+    height: 30px;
+    margin-top: 5px;
+    border-top: 1px solid #999;
+}
+.pageBody{
+    width: 200px;
+    margin:0 auto;
+}
+.pageBody button{
+    padding:2px 5px;
+    margin-top: 2px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background: #2C2E32;
+    color:#555;
+    border-radius: 5px;
+}
+
+
+
+/*contentDetails*/
+.contentDetails{
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background: #17191C;
+}
+.cd{
+    float: left;
+    width: 330px;
+    height: 330px;
+    margin:70px 0 0 70px;
+    border-radius: 50%;
+    background: #333;
+    animation: fy 15s linear infinite;
+}
+@keyframes fy {
+    to{
+        transform: rotate(360deg);
+    }
+}
+.cdbg{
+    position: relative;
+    width: 320px;
+    height: 320px;
+    margin:5px;
+    border-radius: 50%;
+    background: url(../images/singlecover.png) center/cover;
+}
+.cdbg img{
+    position: absolute;
+    top: 58px;
+    left: 58px;
+    width: 204px;
+    height: 204px;
+    border:none;
+    border-radius: 50%;
+}
+
+
+/*歌词*/
+.contentDetails .lyric{
+    float: right;
+    width: 470px;
+    padding:40px;
+}
+.contentDetails .lyric .top{
+    position: relative;
+    width: 100%;
+}
+.top h1{
+    font-size:24px;
+    font-weight: bold;
+    color:#D0D0D1;
+}
+.top p{
+    color:#AFB0B1;
+}
+.top p span{
+    color:#315E92;
+}
+.top i{
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 20px;
+    padding:2px 8px;
+    background: #282B30;
+    border-radius: 5px;
+    cursor: pointer;
+    color:#7A7A7C;
+}
+
+.contentDetails .lyric .bottom{
+    position: relative;
+    width: 400px;
+    margin-top:30px;
+    border-right: 1px solid #ddd;
+}
+
+
+#lyricList li.lyric-item{
+    padding:4px  0 0 12px;
+    font-size: 16px;
+    line-height: 32px;
+    color:#666;
+}
+
+#lyricList li.lyric-item:nth-child(5){
+    font-size: 20px;
+    color: #369;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
