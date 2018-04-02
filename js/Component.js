@@ -257,7 +257,7 @@ var Lyric ={
 	init: function(lyric,first,last){
 		this.first = first;this.last = last;
 		this.lyric = new Array();
-		lyric.replace(/\[([\d:.]+)\]([^_^]+)/g,(function(self,$1,$2){
+		lyric.replace(/\[([\d:.]+)\]([^\r\n]+)/g,(function(self,$1,$2){
 			this.lyric.push({time: $1.split(':').reduce(function(a,b){return a*60+b*1}),str: $2});
 		}).bind(this));
 		if(this.lyric.length === 0) this.lyric.push({time: 1,str: '纯音乐，请欣赏'});

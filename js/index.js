@@ -63,7 +63,7 @@ function lyricRender(){
 
 
 function init(){
-	getSongList("勇气",1,function(res){
+	getSongList("华语",1,function(res){
 		renderList(res);
 	});
 
@@ -117,7 +117,6 @@ function init(){
 
 /**播放歌曲、切歌，重新加载数据**/
 function replay(e){
-	
 	getSongInfo($(this).data('id'),$(this).data('mid'),function(songDesc){
 		renderSong(songDesc);
 		audio.onloadedmetadata = function(){
@@ -235,15 +234,13 @@ function renderSong(songDesc){
 function getSongList(keywords,page,recall){
 	page = page || 1;
 	$.ajax({
-		url: 'http://127.0.0.1/test/songList.php',
+		url: 'http://120.78.219.149/api/music/songList.php',
 		type: 'GET',
 		async: true,
 		data: {
 			keywords: keywords,
 			page: page,
 		},
-		dataType: 'jsonp',
-		jsonpCallback: 'cb',
 		success: function(res){
 			var res = JSON.parse(res);
 			Song.keywords = keywords;
@@ -252,6 +249,7 @@ function getSongList(keywords,page,recall){
 			recall(res);
 		},
 		error: function(err,status,msg){
+			console.log(err,msg);
 			alert("未能找到相对应的歌曲，请重新输入");
 		}
 	});
@@ -266,17 +264,15 @@ function getSongList(keywords,page,recall){
 **/
 function getSongInfo(id,mid,recall){
 	$.ajax({
-		url: 'http://127.0.0.1/test/songInfo.php',
+		url: 'http://120.78.219.149/api/music/songInfo.php',
 		type: 'GET',
 		data: {
 			id: id,
-			mid: mid,
+			mid: mid
 		},
 		async: true,
-		dataType: 'jsonp',
-		jsonpCallback: 'cbd',
 		success: function(res){
-			res = res.replace(/[\r\n]/g,"^");
+			//res = res.replace(/[\r\n]/g,"^");
 			res = JSON.parse(res);
 			recall(res);
 		},
